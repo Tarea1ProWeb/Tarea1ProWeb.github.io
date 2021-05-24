@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos</title> 
+    <style>
+        html{
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        body{
+            display: inline-block;/*Todo en una caja centrada*/
+            text-align: left;/*Todo lo que este en la caja alineado a la izquierda*/
+        }
+
+        *:required{
+            border: thin solid blue;/*Borde de las cajas de texto*/
+        }
+
+        footer{
+            font-size: small;
+        }
+        output{
+            font-weight: bold;
+            font-size: large;
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Textos</h1>
+    </header>
+    <form id="forma" action="javascript:;">
+        <p><em>El borde azul indica Obligatorio</em></p>
+        <p>
+            <label accesskey="N">
+                Nombre<br>
+                <input type="text" name="nombre" autofocus pattern=".{1,30}" title="De 1 a 30 caracteres"
+                    required maxlength="30" size="33" placeholder="1 a 30 caracteres"> <!--CUADRO DE ENTRADA-->
+            </label>
+            <br><output id="salidaNombre"></output>
+        </p>
+
+        <p>
+            <label accesskey="S">
+                Secreto<br>
+                <input type="password" name="secreto" autocomplete="off" required pattern=".{5,30}" 
+                title="De 5 a 30 caracteres" required maxlength="30" size="33" placeholder="5 a 30 caracteres">
+            </label>
+            <br><output id="salidaSecreto"></output>
+        </p>
+
+        <p>
+            <label accesskey="N">
+                Navegador De Internet<br>
+                <input name="navegador" type="text" required list="navegadores">
+
+            </label>
+            <br><output id="salidaNavegador"></output>
+        </p>
+
+        <p>
+            <label accesskey="C">
+                Correro Electrónico<br>
+                <input name="email" type="email" required size="33">
+            </label>
+            <br><output id="salidaEmail"></output>
+        </p>
+
+        <p>
+            <label accesskey="U">
+                Usuario<br>
+                <input name="usuario" type="text" required 
+                 pattern="[A-Za-z0-9]{4,16}" size="19" maxlength="16"
+                 placeholder="De 4 a 16 caracteres">                 
+            </label>
+            <br><output id="salidaUsuario"></output>
+        </p>
+
+        <p>
+            <label accesskey="F">
+                URL Favorita<br>
+                <input name="url" type="url" required size="33"
+                    value="http://">
+            </label>
+            <br><output id="salidaUrl"></output>
+        </p>
+
+        <p>
+            <label accesskey="T">
+                Teléfono<br>
+                <input name="telefono" type="tel" 
+                pattern="\d{10,12}" required maxlength="12" 
+                size="15" placeholder="10 a 12 digitos">
+            </label>
+            <br><output id="salidaTelefono"></output>
+        </p>
+
+        <p>
+            <label accesskey="V">
+                Verso<br>
+                <textarea name="verso" rows="5" cols="30"
+                placeholder="Escribe un Verso"></textarea>
+            </label>
+            <br><output id="salidaVerso"></output>
+        </p>
+        
+        <input type="submit" value="Procesar" accesskey="P">
+        
+    </form>
+    <footer>
+        Copyright &copy; 2021 Daniel Granados IPN
+    </footer>
+    <datalist id="navegadores">
+        <option value="Internet Explorer"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+        <option value="Edge"></option>
+        <option value="FireFox"></option>
+    </datalist>
+    <script src="JavaScript/RecuperarDatos.js"></script>
+</body>
+</html>
