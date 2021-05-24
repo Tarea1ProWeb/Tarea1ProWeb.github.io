@@ -38,7 +38,7 @@
     <form id="forma" action="javascript:;">
         <p><em>El borde azul indica Obligatorio</em></p>
         <p>
-            <label accesskey="N">
+            <label accesskey="B">
                 Boleta<br>
                 <input type="text" name="boleta" autofocus pattern=".{1,10}" title="10 caracteres"
                     required maxlength="10" size="10" placeholder="10 caracteres"> <!--CUADRO DE ENTRADA-->
@@ -52,7 +52,15 @@
                     required maxlength="30" size="33" placeholder="1 a 30 caracteres"> <!--CUADRO DE ENTRADA-->
             </label>
             <br><output id="salidaNombre"></output>
-        </p>        
+        </p>
+        <p>
+            <label accesskey="S">
+                Secuencia<br>
+                <input type="text" name="secuencia" autofocus pattern=".{1,5}" title="5 caracteres"
+                    required maxlength="5" size="10" placeholder="5 caracteres"> <!--CUADRO DE ENTRADA-->
+            </label>
+            <br><output id="salidaSecuencia"></output>
+        </p>         
         
         <input type="submit" value="Procesar" accesskey="P">
         
