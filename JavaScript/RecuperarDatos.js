@@ -1,10 +1,13 @@
 var forma = document.getElementById("forma"),
+    salidaBoleta = document.getElementById("salidaBoleta"),
     salidaNombre = document.getElementById("salidaNombre");
    
 forma.addEventListener("submit", recuperar, false);
 
 function recuperar(){
-    var nombre = forma["nombre"].value;
+    var boleta = forma["boleta"].value,
+    nombre = forma["nombre"].value;
+    salidaBoleta.textContent = boleta;
     salidaNombre.textContent = nombre;
     
 
